@@ -64,7 +64,7 @@ localhost:3000/announcements/ <---- URL for announcements page ()
 
 Shown above are the URLs that correspond to each website page.
 
-Once you have navigated to the correct directory of this repository folder, ensure that you run a 'bundle install' in order for gems required for website functionality are installed. 
+Once you have navigated to the correct directory of this repository folder, ensure that you run a 'bundle install' in order for gems required for website functionality to be installed. 
 
 Next, run 'rails g sunspot_rails:install' in the terminal. This will install the sunspot rails and ensure the search functionality of the FAQ, Events and Announcement pages works. 
 Finally, run 'rake sunspot:solr:start'. If the output states that solr successfully started, then the search feature will function as expected when a user navigates the relevant webpages containing search functionality. 
@@ -74,8 +74,8 @@ Type "rails s" into the terminal and the rails server should initialise.
 From this, you can type in any of the URL's specified above and press enter to start viewing the website.
 If you wish to stop the rails server from running, use the ctrl-c keyboard shortcut in the terminal.
 
-A user authentication system has been included in this website. A register page has been built which allows a user to sign up to the Oval Ski Club website by filling in username, email and password details.
-From this they can login with their details and see that they are logged in on the bottom left hand corner of the webpage.
+A user authentication system has been built in with this website. A register page has been created allowing a user to sign up to the Oval Ski Club website by filling in username, email and password details.
+From this they can login with their registration details. As a result, the user will then see that they are logged in on the bottom left hand corner of the webpage.
 
 This website has a built in rss feed on the homepage providing information of the current weather forecast relating to Oval Ski Clubs location.
 
