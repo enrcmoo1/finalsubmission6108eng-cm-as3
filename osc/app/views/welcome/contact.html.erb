@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Oval Ski Club | Contact Us</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+
+    <!--custom css and bootstrap files are imported below -->
+    <link href="../assets/bootstrap.css" rel="stylesheet">
+    <link href="../assets/mycustomcss.css" rel="stylesheet">
+    <style type="text/css">
+      body
+      {
+      padding-top: 60px;
+      padding-bottom: 40px;
+      }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  </head>
+
+    <!-- Image Banner -->
+    <center>
+    <img src="../assets/headerImage7.jpg" width="940" height="180" title="A picture from our club holiday in 2007"/>
+    <div class="container">
+    </center>
+    </div>
+    <!-- Contact information using div containers and hero-units -->
+    <div class="container">
+    <hr>
+    <div class="container">
+      <div class="hero-unit">
+        <h2>Get in touch with us</h2>
+        If you have a question and haven't found a solution on our <a href="faq">FAQ</a> page, you can get in touch with us by the following methods:
+        <br>
+      </div>
+
+      <div class="container">
+      <div class="hero-unit">
+        <h3>By email</h3>
+
+        <a href ="mailto:SkiEnquiries@OvalSkiClub.com">SkiEnquiries@OvalSkiClub.com</a>
+      </div>
+
+      <div class="container">
+      <div class="hero-unit">
+        <h3>By phone</h3>
+
+        John Wahlers (Chairman) - 0151 645 2452<br>
+        Belinda Dawson (Secretary) - 0151 342 9756<br>
+      </div>
+
+      <div class="container">
+      <div class="hero-unit">
+        <h3>By post</h3>
+
+        You can also write to us with any query you have at the following address:<br>
+        <br>
+        Oval Ski Club<br>
+        Oval Sports Centre<br>
+        Bebington<br>
+        Wirral<br>
+        Liverpool<br>
+        Merseyside<br>
+        CH63 7LF
+      </div>
+
+      <div class="container">
+      <div class="hero-unit">
+        <h3>Visit us</h3>
+
+        We are at the ski hut located towards the rear of the Oval Sports Centre. Please ask at the sports centre reception for directions if you can’t find us.<br>
+        <br>
+        We are open Saturday Mornings and Sunday Evenings throughout the skiing season (see our <a href="sessions">sessions</a> page for more information).</p>
+        <!-- Coding for Google Maps -->
+        <center><iframe width="580" height="420" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.uk/maps?f=q&source=s_q&hl=en&geocode=&q=oval+sports+center&aq=&sll=52.9718,-2.779541&sspn=1.875643,5.410767&t=h&ie=UTF8&hq=oval+sports+center&hnear=&ll=53.357621,-3.011541&spn=0.012294,0.027466&z=15&output=embed"></iframe><br /><small><a href="https://maps.google.co.uk/maps?f=q&source=embed&hl=en&geocode=&q=oval+sports+center&aq=&sll=52.9718,-2.779541&sspn=1.875643,5.410767&t=h&ie=UTF8&hq=oval+sports+center&hnear=&ll=53.357621,-3.011541&spn=0.012294,0.027466&z=15" style="color:#0000FF;text-align:center"><a href="https://maps.google.co.uk/maps?f=q&source=embed&hl=en&geocode=&q=oval+sports+center&aq=&sll=52.9718,-2.779541&sspn=1.875643,5.410767&t=h&ie=UTF8&hq=oval+sports+center&hnear=&ll=53.357621,-3.011541&spn=0.012294,0.27466&z=15">Google Maps</a></a></small></center>
+      </div>
+      <hr>
+
+      <footer>
+      <!-- Links to Facebook and Twitter -->
+      <center>&copy; Oval Ski Club 2013 &nbsp</center>
+      <a href="http://www.facebook.com/group.php?gid=2256597544"><img src="../assets/facebooklogo.png" width="55" height="25" title="Like us on Facebook"><a href="https://twitter.com/OvalSki"><img src="../assets/twitter.png" width="55" height="25" title="Follow us on Twitter"></a></a>
+      </footer>
+    </div>
+
+      <%= yield %>
+
+    <script text/javascript src="../assets/jquery-1.8.2.min.js"></script>
+    <script text/javascript src="../assets/bootstrap.min.js"></script>
+<script>
+$(function(){
+$('.dropdown-toggle').dropdown();
+$('.dropdown input, .dropdown label').click(function (e) {
+e.stopPropagation();
+});
+});
+</script>
+
+
+<%=yield%>
+
+</body>
+</html>
+

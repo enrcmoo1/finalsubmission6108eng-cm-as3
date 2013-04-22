@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Oval Ski Club | Announcements</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <!--custom css file and bootstrap files are imported below -->
+    <link href="../assets/bootstrap.css" rel="stylesheet">
+    <link href="../assets/mycustomcss.css" rel="stylesheet">
+    <style type="text/css">
+      body
+      {
+      padding-top: 60px;
+      padding-bottom: 40px;
+      }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  </head>
+
+    <!-- Image Banner -->
+    <center>
+    <img src="../assets/headerImage12.jpg" width="940" height="180" title="Welcome to the Oval Ski Club website">
+    <div class="container">
+    </center>
+</div>
+
+<hr>
+
+<!-- Information about club sessions using div containers and hero-units -->
+
+<div class="container">
+<hr>
+<div class="container">
+<%- model_class = Announcement -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+</div>
+
+<%= form_tag announcements_path, :method => :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+<% end %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:title) %></th>
+      <th><%= model_class.human_attribute_name(:body) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @announcements.each do |announcement| %>
+      <tr>
+        <td><%= announcement.title %></td>
+        <td><%= announcement.body %></td>
+        <td><%=l announcement.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_announcement_path(announcement), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      announcement_path(announcement),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<center>
+<%= link_to t('.new', :default => t("helpers.links.create new announcement")),
+            new_announcement_path,
+            :class => 'btn btn-primary' %>
+            </center>
+
+      <hr>
+      <footer>
+      <!-- Links to Facebook and Twitter -->
+      <center>&copy; Oval Ski Club 2013 &nbsp</center>
+      <a href="http://www.facebook.com/group.php?gid=2256597544"><img src="../assets/facebooklogo.png" width="55" height="25" title="Like us on Facebook"><a href="https://twitter.com/OvalSki"><img src="../assets/twitter.png" width="55" height="25" title="Follow us on Twitter"></a></a>
+      </footer>
+    </div>
+
+    <script text/javascript src="assets/js/jquery-1.8.2.min.js"></script>
+    <script text/javascript src="assets/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
+
+
+<script text/javascript src="../assets/jquery-1.8.2.min.js"></script>
+<script text/javascript src="../assets/bootstrap.min.js"></script>
+<script>
+$(function(){
+$('.dropdown-toggle').dropdown();
+$('.dropdown input, .dropdown label').click(function (e) {
+e.stopPropagation();
+});
+});
+</script>

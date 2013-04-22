@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Oval Ski Club | Home</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+
+    <!--custom css and bootstrap files are imported below -->
+    <link href="../assets/bootstrap.css" rel="stylesheet">
+    <link href="../assets/mycustomcss.css" rel="stylesheet">
+    <style type="text/css">
+      body
+      {
+      padding-top: 60px;
+      padding-bottom: 40px;
+      }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  </head>
+
+    <!-- Image Banner -->
+    <center>
+    <img src="../assets/ovalskiclub.jpg" width="940" height="180" title="Welcome to the Oval Ski Club website">
+    </center>
+
+<br>
+<br>
+<br>
+<center>
+<h4>Weather Report</h4>
+</center>
+<center>
+    <!-- rss weather feed -->
+<script type="text/javascript">
+<!--
+rssmikle_url="http://rss.weather.com/weather/rss/local/UKXX0017?cm_ven=LWO&cm_cat=rss&par=LWO_rss";
+rssmikle_frame_width="300";
+rssmikle_frame_height="400";
+rssmikle_target="_blank";
+rssmikle_font="";
+rssmikle_font_size="12";
+rssmikle_border="on";
+rssmikle_css_url="";
+rssmikle_title="on";
+rssmikle_title_bgcolor="#0066FF";
+rssmikle_title_color="#FFFFFF";
+rssmikle_title_bgimage="http://";
+rssmikle_item_bgcolor="#FFFFFF";
+rssmikle_item_bgimage="http://";
+rssmikle_item_title_length="20";
+rssmikle_item_title_color="#666666";
+rssmikle_item_border_bottom="on";
+rssmikle_item_description="on";
+rssmikle_item_description_length="40";
+rssmikle_item_description_color="#666666";
+rssmikle_item_date="off";
+rssmikle_item_description_tag="off";
+rssmikle_item_podcast="icon";
+//-->
+</script>
+<script type="text/javascript" src="http://feed.mikle.com/js/rssmikle.js"></script>
+<div style="font-size:10px; text-align:right;">
+<a href="http://feed.mikle.com/en/" target="_blank" style="color:#CCCCCC;">FeedWind</a>
+</div>
+</center>
+<!-- end of rss weather code -->
+
+<div class="container">
+<hr>
+<!-- Oval Ski Club updates coded using div containers, hero-units and accordions -->
+      <div class="container">
+      <div class="hero-unit">
+        <h2>Updates</h2>
+        <h4>Club Holiday 2012-2013</h4>
+        The location of this years Oval Ski Club holiday will be in either in St.Christoph or St.Anton in Austria. The holiday date will be Saturday 23rd March - 30th March 2013.<br>
+        <br>
+        An update will be posted in the near future stating where this seasons holiday will be located.<br>
+        <br>
+        Group sizes will vary and if you wish to attend, ensure you book your place as soon as possible before it is too late.<br>
+        <br>
+        Contact Andy Kearney on 07855662891 for further details or to book your place.
+      </div>
+    </div>
+      <div class="container">
+        <h2>Upcoming events this week</h2>
+      <div class="accordion" id="accordion2">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+        <h3>Saturday 9/2/2013</h3>
+      </a>
+    </div>
+    <div id="collapseOne" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <h4>10:00am - 11:00am</h4>
+        Junior Club for under 11's. New beginners lessons start!<br>
+        Junior beginners under 11 years are welcome to enrol for new block of lessons
+        <h4>11:30am - 1:00pm</h4>
+        Junior Club for 11+. New beginners lessons start<br>
+        Juniors beginners 11yrs+ welcome to enrol for new block of lessons
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+        <h3>Sunday 10/2/2013</h3>
+      </a>
+    </div>
+    <div id="collapseTwo" class="accordion-body collapse">
+      <div class="accordion-inner">
+        <h4>5:00pm - 6:00pm</h4>
+        Adult Club - beginners lessons (week 1 of 3)
+        <h4>6:00pm - 7:00pm</h4>
+        Adult Club - open skiing session + improver lessons
+        <h4>7:00pm - 8:00pm</h4>
+        Adult Club - intermediate/advanced lessons
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= yield %>
+      <hr>
+      <footer>
+      <!-- Links to Facebook and Twitter -->
+      <center>&copy; Oval Ski Club 2013 &nbsp</center>
+      <a href="http://www.facebook.com/group.php?gid=2256597544"><img src="../assets/facebooklogo.png" width="55" height="25" title="Like us on Facebook"><a href="https://twitter.com/OvalSki"><img src="../assets/twitter.png" width="55" height="25" title="Follow us on Twitter"></a></a>
+      </footer>
+    </div>
+
+    <script text/javascript src="assets/js/jquery-1.8.2.min.js"></script>
+    <script text/javascript src="assets/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Store</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<script text/javascript src="../assets/jquery-1.8.2.min.js"></script>
+<script text/javascript src="../assets/bootstrap.min.js"></script>
+
+<script>
+$(function(){
+$('.dropdown-toggle').dropdown();
+$('.dropdown input, .dropdown label').click(function (e) {
+e.stopPropagation();
+});
+});
+</script>
+
+
+<%=yield%>
+
+</body>
+</html>

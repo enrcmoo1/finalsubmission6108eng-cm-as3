@@ -1,0 +1,67 @@
+Instructional Oval Ski Club Website User Guide
+
+This is an instructional guide on how to efficiently use the Oval Ski Club website inside this repository that has been built using ruby on rails.
+
+Oval Ski Club are a voluntary organisation based in Bebington, Wirral. 
+Oval Ski Club offer skiing tuition for all ages and also run an active social club promoting various events through out the year, and also a Ski Racing Team which all members are welcome to join. 
+They are ideally located for the Wirral, Cheshire, Liverpool and Merseyside areas.
+
+This website enables users to check the latest events of Oval Ski Club and also sign up for membership or club events if they wish to do so.
+
+If you wish to download this repository, navigate back to the osc folder in the directory above and type the given command in github for either HTTP, SSH or Git Read-Only.
+You can also click on the ZIP option which downloads this repository as a zipped folder which then requires the files to be extracted.
+
+When you have downloaded your repository, ensure you make a note of the directory this folder is located in once you are happy with its location. 
+From this, you will be able to use the terminal efficiently and be able to run the website successfully without any problems.
+
+Check you are in the correct directory by typing "pwd" into the terminal. 
+If this is not the case, type "ls" and press enter.
+A number of folders may appear depending on how your files are structured. 
+Simply find the correct folder and type cd followed a space and the folder name.
+
+You are now located in the correct directory and will be able to run the website.
+
+The website contains 10 pages in total and these are as follows:
+
+- Index
+- About Us
+- Social Activities
+- Club Sessions
+- Club Holidays
+- Racing Team
+- Contact Us
+- FAQ
+- Announcements ()
+- Events ()
+
+localhost:3000/welcome/index <---- URL for home page
+
+localhost:3000/welcome/about <---- URL for about us page
+
+localhost:3000/welcome/social <---- URL for social activities page
+
+localhost:3000/welcome/faq <---- URL for faq page
+
+localhost:3000/welcome/contact <---- URL for contact us page
+
+localhost:3000/welcome/sessions <---- URL for club sessions page
+
+localhost:3000/welcome/holidays <---- URL for club holidays page
+
+localhost:3000/welcome/racing <---- URL for racing team page
+
+localhost:3000/events/ <---- URL for events page ()
+
+localhost:3000/announcements/ <---- URL for announcements page ()
+
+() - website pages that contain built in databases
+
+Shown above are the URLs that correspond to each website page.
+
+Once you are in the correct directory and wish to view the website, type "rails s" into the terminal and the rails server should initialise. 
+From this, you can type in any of the URL's above and press enter to start viewing the website.
+
+The databases included on both the events and announcement webpages enable you to create, edit and delete records.
+In this instance, the records are associated with club events and announcements on the Oval Ski Club website.
+
+If you wish to stop the rails server from running, use the ctrl-c keyboard shortcut.
