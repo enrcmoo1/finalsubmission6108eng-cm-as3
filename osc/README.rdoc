@@ -1,6 +1,6 @@
 Instructional Oval Ski Club Website User Guide
 
-This is an instructional guide on how to efficiently use the Oval Ski Club website inside this repository that has been built using ruby on rails.
+This is an updated instructional guide on how to efficiently use the Oval Ski Club website attahced inside this repository that has been built using ruby on rails.
 
 Oval Ski Club are a voluntary organisation based in Bebington, Wirral. 
 Oval Ski Club offer skiing tuition for all ages and also run an active social club promoting various events through out the year, and also a Ski Racing Team which all members are welcome to join. 
@@ -21,18 +21,24 @@ Simply find the correct folder and type cd followed a space and the folder name.
 
 You are now located in the correct directory and will be able to run the website.
 
-The website contains 10 pages in total and these are as follows:
+The website contains the following webpages:
 
-- Index
+- Login
+- Register
+- Homepage
 - About Us
 - Social Activities
 - Club Sessions
 - Club Holidays
 - Racing Team
 - Contact Us
-- FAQ
+- FAQ ()
 - Announcements ()
 - Events ()
+
+localhost:3000/login <---- URL for login page
+
+localhost:3000/authors/new <---- URL for register page
 
 localhost:3000/welcome/index <---- URL for home page
 
@@ -40,7 +46,7 @@ localhost:3000/welcome/about <---- URL for about us page
 
 localhost:3000/welcome/social <---- URL for social activities page
 
-localhost:3000/welcome/faq <---- URL for faq page
+localhost:3000/faqs <---- URL for faq page ()
 
 localhost:3000/welcome/contact <---- URL for contact us page
 
@@ -58,10 +64,25 @@ localhost:3000/announcements/ <---- URL for announcements page ()
 
 Shown above are the URLs that correspond to each website page.
 
-Once you are in the correct directory and wish to view the website, type "rails s" into the terminal and the rails server should initialise. 
-From this, you can type in any of the URL's above and press enter to start viewing the website.
+Once you have navigated to the correct directory of this repository folder, ensure that you run a 'bundle install' in order for gems required for website functionality are installed. 
 
-The databases included on both the events and announcement webpages enable you to create, edit and delete records.
+Next, run 'rails g sunspot_rails:install' in the terminal. This will install the sunspot rails and ensure the search functionality of the FAQ, Events and Announcement pages works. 
+Finally, run 'rake sunspot:solr:start'. If the output states that solr successfully started, then the search feature will function as expected when a user navigates the relevant webpages containing search functionality. 
+
+Once the steps described previously have been completed, the website can then be run. 
+Type "rails s" into the terminal and the rails server should initialise. 
+From this, you can type in any of the URL's specified above and press enter to start viewing the website.
+
+A user authentication system has been included in this website. A register page has been built which allows a user to sign up to the Oval Ski Club website by filling in username, email and password details.
+From this they can login with their details and see that they are logged in on the bottom left hand corner of the webpage.
+
 In this instance, the records are associated with club events and announcements on the Oval Ski Club website.
 
-If you wish to stop the rails server from running, use the ctrl-c keyboard shortcut.
+If you wish to stop the rails server from running, use the ctrl-c keyboard shortcut in the terminal.
+
+This website has a built in rss feed on the homepage providing information of the current weather forecast relating to Oval Ski Clubs location.
+
+On the FAQ, Event and Announcement pages, databases are included allowing a user to create, edit and delete questions, club events and announcements respectively. 
+On each of these pages, search functionality has been included which allows a user to search for a specific question, ski club event or announcement contained in the list.
+
+For the information contained in the event database, a JSON feed has been included which allows the user to view the JSON coding of each event in the database.
