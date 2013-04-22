@@ -72,13 +72,10 @@ Finally, run 'rake sunspot:solr:start'. If the output states that solr successfu
 Once the steps described previously have been completed, the website can then be run. 
 Type "rails s" into the terminal and the rails server should initialise. 
 From this, you can type in any of the URL's specified above and press enter to start viewing the website.
+If you wish to stop the rails server from running, use the ctrl-c keyboard shortcut in the terminal.
 
 A user authentication system has been included in this website. A register page has been built which allows a user to sign up to the Oval Ski Club website by filling in username, email and password details.
 From this they can login with their details and see that they are logged in on the bottom left hand corner of the webpage.
-
-In this instance, the records are associated with club events and announcements on the Oval Ski Club website.
-
-If you wish to stop the rails server from running, use the ctrl-c keyboard shortcut in the terminal.
 
 This website has a built in rss feed on the homepage providing information of the current weather forecast relating to Oval Ski Clubs location.
 
